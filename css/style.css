@@ -3,37 +3,36 @@
   --green: #30c88f;
   --black: #2d314d;
   --gray: #9597a5;
-  --gradient: linear-gradient(135deg, #33D35E 0%, #2AB6D9 100%);
+  --gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 100%);
 }
 
 /* FONT-FACE */
 @font-face {
-  font-family: 'Public Sans';
-  src: url('../fonts/') format('woff2'),
-    url('../fonts/PublicSans-Regular.woff') format('woff');
+  font-family: "Public Sans";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/PublicSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Public Sans';
-  src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
-    url('../fonts/PublicSans-Thin.woff') format('woff');
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Thin.woff2") format("woff2"),
+    url("../fonts/PublicSans-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Public Sans';
-  src: url('../fonts/PublicSans-Medium.woff2') format('woff2'),
-    url('../fonts/PublicSans-Medium.woff') format('woff');
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Medium.woff2") format("woff2"),
+    url("../fonts/PublicSans-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 
 /* GLOBAL */
 html {
@@ -128,6 +127,7 @@ select:-webkit-autofill:focus {
 }
 
 .logo__img {
+  display: block;
   width: 139px;
   height: 20px;
   object-fit: contain;
@@ -173,7 +173,6 @@ select:-webkit-autofill:focus {
   height: 4px;
   background-color: var(--green);
   background-image: var(--gradient);
-  ;
   content: "";
 }
 
@@ -283,6 +282,36 @@ select:-webkit-autofill:focus {
   margin: 0;
   font-size: 13px;
   line-height: 18px;
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.socials__link {
+  display: flex;
+  color: #fff;
+}
+
+.socials__link:hover {
+  color: var(--green);
+}
+
+.socials__link:active {
+  opacity: 0.6;
+}
+
+.socials__icon {
+  object-fit: contain;
+  object-position: center;
 }
 
 /* SITE-HEADER */
@@ -430,4 +459,29 @@ select:-webkit-autofill:focus {
   line-height: 64px;
   font-weight: 100;
   color: var(--black);
+}
+
+/* SITE-FOOOTER */
+.site-footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: var(--black);
+  color: #fff;
+}
+
+.site-footer__container {
+  display: flex;
+}
+
+.site-footer__logo-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 160px;
+}
+
+.site-footer__logo {
+  margin-bottom: 24px;
 }
